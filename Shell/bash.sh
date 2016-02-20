@@ -5,3 +5,7 @@ function nbash {
 function sbash {
 	source ~/.bashrc
 }
+
+function vbash {
+	vim ~/.bashrc
+}

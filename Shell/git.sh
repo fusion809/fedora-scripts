@@ -47,20 +47,20 @@ function pushss {
   push "$1" && gitsh && gitsize
 }
 
-# sabayon-scripts
+# fedora-scripts
   ## Update local sabayon-scripts repo
   function cps {
     cp -a ~/Shell/* ~/GitHub/fedora-scripts/Shell
     cp -a ~/.bashrc ~/GitHub/fedora-scripts/
   }
 
-  function cdss {
+  function cdfs {
 	cd ~/GitHub/fedora-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
   function shup {
-    cps && cdss && push "$1"
+    cps && cdfs && push "$1"
   }
 
 #############################################################
