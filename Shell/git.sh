@@ -52,6 +52,7 @@ function pushss {
   function cps {
     cp -a ~/Shell/* ~/GitHub/fedora-scripts/Shell
     cp -a ~/.bashrc ~/GitHub/fedora-scripts/
+    sudo cp -a /root/{Shell,.bashrc} ~/GitHub/fedora-scripts/root/
   }
 
   function cdfs {
