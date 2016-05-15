@@ -7,5 +7,11 @@ my life more convenient on my Fedora machine. They are presented here mostly for
 To quickly install this repo on your PC run:
 
 ```bash
-sh -c "$(wget -cqO- https://git.io/va1HS)"
+/bin/bash -c "$(wget -cqO- https://git.io/vrsNO)"
+```
+
+or:
+
+```bash
+/bin/bash -c "$(curl -sL https://git.io/vrsNO)"
 ```
