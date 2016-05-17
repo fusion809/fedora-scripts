@@ -12,7 +12,7 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \['
 
 # User specific aliases and functions
 
-for i in ~/Shell/*.sh
+for i in $HOME/Shell/*.sh
 do
 	. "$i"
 done
