@@ -21,6 +21,9 @@ cp -a ~/GitHub/zsh-theme/*.zsh-theme ~/.oh-my-zsh/themes/
 # Get zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
+# Get history-substring-search
+git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/zsh-history-substring-search
+
 # Change default login shell to Zsh
 chsh -s /bin/zsh
 sudo chsh -s /bin/zsh
