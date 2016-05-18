@@ -1,5 +1,5 @@
 function cpsh {
-  cp -a ~/GitHub/fedora-scripts/Shell/* ~/Shell/
-  cp -a ~/GitHub/fedora-scripts/.bashrc ~/.bashrc
-  sudo cp -a ~/GitHub/fedora-scripts/root/{Shell,.bashrc} /root/
+  cp -a $HOME/GitHub/fedora-scripts/Shell/* $HOME/Shell/
+  cp -a $HOME/GitHub/fedora-scripts/.bashrc $HOME/.bashrc
+  sudo cp -a $HOME/GitHub/fedora-scripts/root/{Shell,.bashrc} /root/
 }

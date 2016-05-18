@@ -50,13 +50,13 @@ function pushss {
 # fedora-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -a ~/Shell/* ~/GitHub/fedora-scripts/Shell
-    cp -a ~/.bashrc ~/GitHub/fedora-scripts/
-    sudo cp -a /root/{Shell,.bashrc} ~/GitHub/fedora-scripts/root/
+    cp -a $HOME/Shell/* $HOME/GitHub/fedora-scripts/Shell
+    cp -a $HOME/.bashrc $HOME/GitHub/fedora-scripts/
+    sudo cp -a /root/{Shell,.bashrc} $HOME/GitHub/fedora-scripts/root/
   }
 
   function cdfs {
-	cd ~/GitHub/fedora-scripts
+	cd $HOME/GitHub/fedora-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
@@ -89,7 +89,7 @@ function start_agent {
     /usr/bin/ssh-add
 }
 
-if [ -f "${SSH_ENV}" ]; then
+if [[-f "${SSH_ENV}" ]; then
      . "${SSH_ENV}" > /dev/null
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
       start_agent;

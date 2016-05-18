@@ -1,25 +1,25 @@
 function cdp {
-	cd ~/Programs
+	cd $HOME/Programs
 }
 
 function cdrpm {
-	cd ~/rpmbuild/
+	cd $HOME/rpmbuild/
 }
 
 # cd to SPECS
 function cdsp {
-	cd ~/rpmbuild/SPECS
+	cd $HOME/rpmbuild/SPECS
 }
 
 alias cdobs=cdsp
 
 # cd to Shell
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdman {
-	cd ~/Documents/Manpages
+	cd $HOME/Documents/Manpages
 }
 
 function cdg {
