@@ -57,9 +57,6 @@ if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-history-substring-search ]]; then
   git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
 fi
 
-# Get history-substring-search
-git clone https://github.com/zsh-users/zsh-history-substring-search ~/.oh-my-zsh/zsh-history-substring-search
-
 # Change default login shell to Zsh
 chsh -s /bin/zsh
 sudo chsh -s /bin/zsh
