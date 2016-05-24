@@ -1,15 +1,27 @@
+function cdp {
+	cd ~/Programs
+}
+
+function cdrpm {
+	cd ~/rpmbuild/
+}
+
+# cd to SPECS
+function cdsp {
+	cd ~/rpmbuild/SPECS
+}
+
+alias cdobs=cdsp
+
+# cd to Shell
 function cdsh {
 	cd ~/Shell
 }
 
-function cdi {
-	cd ~/.kde4/share/icons
+function cdman {
+	cd ~/Documents/Manpages
 }
 
 function cdg {
-	cd ~/GitHub
-}
-
-function cdfs {
-	cd ~/GitHub/freebsd-scripts
+	cd $HOME/GitHub
 }
