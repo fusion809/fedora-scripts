@@ -1,7 +1,7 @@
 function szsh {
-	source ~/.zshrc
+	source $HOME/.zshrc
 }
 
 function nzsh {
-	nano ~/.zshrc
+	nano $HOME/.zshrc
 }
