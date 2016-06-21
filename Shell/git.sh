@@ -50,13 +50,13 @@ function pushss {
 # fedora-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -a $HOME/Shell/* $HOME/GitHub/fedora-scripts/Shell
-    cp -a $HOME/.bashrc $HOME/GitHub/fedora-scripts/
-    sudo cp -a /root/{Shell,.bashrc} $HOME/GitHub/fedora-scripts/root/
+    cp -a $HOME/Shell/* $HOME/GitHub/mine/fedora-scripts/Shell
+    cp -a $HOME/.bashrc $HOME/GitHub/mine/fedora-scripts/
+    sudo cp -a /root/{Shell,.bashrc} $HOME/GitHub/mine/fedora-scripts/root/
   }
 
   function cdfs {
-	cd $HOME/GitHub/fedora-scripts
+	cd $HOME/GitHub/mine/fedora-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
