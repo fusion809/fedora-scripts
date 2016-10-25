@@ -4,21 +4,14 @@ if ! [[ -d $HOME/GitHub ]]; then
 fi
 
 # Get openssh, if not pre-installed and Zsh
-sudo dnf install -y git openssh zsh
+sudo dnf install -y git openssh zsh util-linux-user
 
 # Clone fedora-scripts repo
-if ! [[ -d $HOME/GitHub/fedora-scripts ]] || ! [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
+if ! [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
   git clone https://github.com/fusion809/fedora-scripts $HOME/GitHub/mine/fedora-scripts
   # Copy across
   cp -a $HOME/GitHub/mine/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
   sudo cp -a $HOME/GitHub/mine/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/fedora-scripts ]]; then
-  cd $HOME/GitHub/fedora-scripts
-  git pull origin master
-  cd -
-  # Copy across
-  cp -a $HOME/GitHub/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
 elif [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
   cd $HOME/GitHub/mine/fedora-scripts
   git pull origin master
