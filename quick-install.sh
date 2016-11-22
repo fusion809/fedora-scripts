@@ -1,24 +1,24 @@
 # Create GitHub directory
-if ! [[ -d $HOME/GitHub ]]; then
-  mkdir $HOME/GitHub
+if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
+  mkdir -p $HOME/GitHub/mine/scripts
 fi
 
 # Get openssh, if not pre-installed and Zsh
 sudo dnf install -y git openssh zsh util-linux-user
 
 # Clone fedora-scripts repo
-if ! [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
-  git clone https://github.com/fusion809/fedora-scripts $HOME/GitHub/mine/fedora-scripts
+if ! [[ -d $HOME/GitHub/mine/scripts/fedora-scripts ]]; then
+  git clone https://github.com/fusion809/fedora-scripts $HOME/GitHub/mine/scripts/fedora-scripts
   # Copy across
-  cp -a $HOME/GitHub/mine/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/fedora-scripts ]]; then
-  cd $HOME/GitHub/mine/fedora-scripts
+  cp -a $HOME/GitHub/mine/scripts/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/scripts/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $HOME/GitHub/mine/scripts/fedora-scripts ]]; then
+  cd $HOME/GitHub/mine/scripts/fedora-scripts
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/mine/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  cp -a $HOME/GitHub/mine/scripts/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/scripts/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -30,15 +30,15 @@ else
   cd -
 fi
 
-if ! [[ -d $HOME/GitHub/zsh-theme ]] || ! [[ -d $HOME/GitHub/mine/zsh-theme ]]; then
+if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
 # Get my self-made zsh-themes
-  git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/zsh-theme
-  cp -a $HOME/GitHub/mine/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/scripts/zsh-theme
+  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 else
-  cd $HOME/GitHub/{,mine/}zsh-theme
+  cd $HOME/GitHub/mine/scripts/zsh-theme
   git pull origin master
   cd -
-  cp -a $HOME/GitHub/{,mine/}zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
