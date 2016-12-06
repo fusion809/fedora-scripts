@@ -26,6 +26,10 @@ function cdg {
 	cd $HOME/GitHub
 }
 
+function cdgo {
+	cd $HOME/GitHub/others
+}
+
 function cdgm {
 	cd $HOME/GitHub/mine
 }
