@@ -1,5 +1,5 @@
 function cdp {
-	cd $HOME/Programs
+	cd $HOME/Programs/$1
 }
 
 function cdrpm {
@@ -23,15 +23,15 @@ function cdman {
 }
 
 function cdg {
-	cd $HOME/GitHub
+	cd $HOME/GitHub/$1
 }
 
 function cdgo {
-	cd $HOME/GitHub/others
+	cd $HOME/GitHub/others/$1
 }
 
 function cdgm {
-	cd $HOME/GitHub/mine
+	cd $HOME/GitHub/mine/$1
 }
 
 function cdap {
