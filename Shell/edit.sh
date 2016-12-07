@@ -11,5 +11,5 @@ function eded {
 }
 
 function edem {
-	atom $HOME/GitHub/mine/editors/emacs/$1
+	eded "emacs/$1"
 }
