@@ -25,8 +25,7 @@ function push {
 
 # Push GitHub pages changes
 function pushp {
-  git add --all && git commit -m "$1" && git push -u origin
-master
+  git add --all && git commit -m "$1" && git push -u origin master
 }
 
 # Estimate the size of the current repo
@@ -48,15 +47,18 @@ function pushss {
 }
 
 # fedora-scripts
-  ## Update local sabayon-scripts repo
+  ## Update local fedora-scripts repo
   function cps {
+    chmod +x $HOME/Shell/{*,*/*}.sh
     cp -a $HOME/Shell/* $HOME/GitHub/mine/scripts/fedora-scripts/Shell
     cp -a $HOME/.{bash,zsh}rc $HOME/GitHub/mine/scripts/fedora-scripts/
-    sudo cp -a /root/{Shell,.{bash,zsh}rc} $HOME/GitHub/mine/scripts/fedora-scripts/root/
+    sudo chmod +x /root/Shell/*.sh
+    sudo cp -a /root/.{bash,zsh}rc $HOME/GitHub/mine/scripts/fedora-scripts/root/
+    sudo cp -a /root/Shell/* $HOME/GitHub/mine/scripts/fedora-scripts/root/Shell
   }
 
   function cdfs {
-	cd $HOME/GitHub/mine/scripts/fedora-scripts
+	  cd $HOME/GitHub/mine/scripts/fedora-scripts
   }
 
   ## Update sabayon-scripts GitHub repo
