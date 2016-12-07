@@ -61,7 +61,7 @@ function pushss {
 
   ## Update sabayon-scripts GitHub repo
   function shup {
-    cps && cdfs && push "$1"
+    cps && cdfs && push "$1" && szsh
   }
 
 #############################################################
