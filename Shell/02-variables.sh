@@ -4,3 +4,4 @@ export GHUBM=$GHUB/mine
 export SCR=$GHUBM/scripts
 export PKG=$GHUBM/packaging
 export FS=$SCR/fedora-scripts
+export FGI=$GHUBM/websites/fusion809.github.io
