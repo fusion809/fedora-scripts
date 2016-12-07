@@ -9,3 +9,7 @@ function sdry {
 function update {
 	sudo dnf update -y
 }
+
+function sds {
+	sudo dnf search "$@"
+}
