@@ -9,3 +9,7 @@ function apmr {
 function apms {
   apm search "$@"
 }
+
+function apmup {
+  apm update --no-confirm
+}

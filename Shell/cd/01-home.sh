@@ -21,3 +21,11 @@ alias cdobs=cdsp
 function cdsh {
 	cd $HOME/Shell
 }
+
+function cdv {
+	cd $HOME/Videos
+}
+
+function cdvs {
+	cd $HOME/Videos/SO
+}
