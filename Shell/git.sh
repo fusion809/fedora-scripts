@@ -52,9 +52,8 @@ function pushss {
     chmod +x $HOME/Shell/{*,*/*}.sh
     cp -a $HOME/Shell/* $HOME/GitHub/mine/scripts/fedora-scripts/Shell
     cp -a $HOME/.{bash,zsh}rc $HOME/GitHub/mine/scripts/fedora-scripts/
-    sudo chmod +x /root/Shell/*.sh
-    sudo cp -a /root/.{bash,zsh}rc $HOME/GitHub/mine/scripts/fedora-scripts/root/
-    sudo cp -a /root/Shell/* $HOME/GitHub/mine/scripts/fedora-scripts/root/Shell
+    sudo cp -a /root/{Shell,.{bash,zsh}rc} $HOME/GitHub/mine/scripts/fedora-scripts/root/
+    sudo chmod +x $HOME/GitHub/mine/scripts/fedora-scripts/root/Shell/*.sh
   }
 
   function cdfs {
