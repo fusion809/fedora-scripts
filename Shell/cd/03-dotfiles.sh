@@ -1,3 +1,7 @@
+function cdat {
+  cd $HOME/.atom
+}
+
 function cdls {
   cd $HOME/.local/share/$1
 }
