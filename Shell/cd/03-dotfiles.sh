@@ -2,6 +2,10 @@ function cdat {
   cd $HOME/.atom
 }
 
+function cdi {
+  cd $HOME/.icons
+}
+
 function cdls {
   cd $HOME/.local/share/$1
 }
@@ -16,4 +20,12 @@ function cdld {
 
 function cdli {
   cdls "icons/$1"
+}
+
+function cdlt {
+  cdls "themes/$1"
+}
+
+function cdt {
+  cd $HOME/.themes
 }

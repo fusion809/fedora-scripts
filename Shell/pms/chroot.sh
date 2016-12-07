@@ -3,7 +3,7 @@ function pacaup {
 }
 
 function archroot {
-  sudo mount /dev/sdb1 /mnt && sudo arch-chroot /mnt /usr/bin/su-fusion809
+  sudo arch-chroot /mnt /usr/bin/su-fusion809
 }
 
 function archup {
