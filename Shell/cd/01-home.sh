@@ -10,6 +10,10 @@ function cdp {
 	cd $HOME/Programs/$1
 }
 
+function cdpa {
+	cdp "AppImages/$1"
+}
+
 function cdrpm {
 	cd $HOME/rpmbuild/$1
 }
