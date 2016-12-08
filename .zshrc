@@ -52,6 +52,7 @@ ZSH_THEME="hcompact"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git github zsh-syntax-highlighting safe-paste zsh-completions github)
+
 autoload -U compinit && compinit
 source $ZSH/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys
@@ -74,7 +75,6 @@ bindkey '^[[B' history-substring-search-down
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -101,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
 for i in $HOME/Shell/*.sh
 do
   . "$i"
