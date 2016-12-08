@@ -2,6 +2,10 @@ function cdd {
 	cd $HOME/Documents/$1
 }
 
+function cdcfe {
+	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
+}
+
 function cdp {
 	cd $HOME/Programs/$1
 }
