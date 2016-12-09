@@ -1,7 +1,11 @@
 function emaim {
-  emacs "$PKG/AppImages/$1"
+  empk "AppImages/$1"
 }
 
 function emeam {
-  emacs "$PKG/Emacs.AppImage/$1"
+  empk "Emacs.AppImage/$1"
+}
+
+function emgam {
+  empk "GVim.AppImage/$1"
 }

@@ -1,3 +1,3 @@
 function emfs {
-  emacs $SCR/fedora-scripts
+  emsc "fedora-scripts/$1"
 }

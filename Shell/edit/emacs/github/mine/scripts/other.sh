@@ -1,3 +1,3 @@
 function emgn {
-  emacs "$SCR/GNU_Octave/$1"
+  emsc "GNU_Octave/$1"
 }
