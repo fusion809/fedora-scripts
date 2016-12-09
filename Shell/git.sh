@@ -51,7 +51,7 @@ function pushss {
   function cps {
     sudo rm -rf $FS/Shell $FS/root/Shell
     mkdir -p $FS/Shell
-    chmod +x $HOME/Shell/{*,*/*,*/*/*/*,*/*/*/*/*}.sh
+    chmod +x $HOME/Shell/{*,*/*,*/*/*/*,*/*/*/*/*,*/*/*/*/*/*}.sh
     cp -a $HOME/Shell/* $FS/Shell
     cp -a $HOME/.{bash,zsh}rc $FS/
     sudo cp -a /root/{Shell,.{bash,zsh}rc} $FS/root/
