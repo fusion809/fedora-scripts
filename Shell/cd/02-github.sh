@@ -18,6 +18,10 @@ function cdsc {
 	cd $SCR/$1
 }
 
+function cdgn {
+	cdsc "GNU_Octave/$1"
+}
+
 function cdpk {
 	cd $PKG/$1
 }
