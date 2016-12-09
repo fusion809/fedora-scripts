@@ -1,3 +1,3 @@
 function space {
-	df -h /dev/sda4
+	df -h /
 }
