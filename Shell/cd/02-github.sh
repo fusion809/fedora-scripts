@@ -18,6 +18,18 @@ function cdpk {
 	cd $HOME/GitHub/mine/packaging/$1
 }
 
+function cdaim {
+	cdpk "AppImages/$1"
+}
+
+function cdeam {
+	cdpk "Emacs.AppImage/$1"
+}
+
+function cdgam {
+	cdpk "GVim.AppImage/$1"
+}
+
 function cded {
 	cd $HOME/GitHub/mine/editors/$1
 }

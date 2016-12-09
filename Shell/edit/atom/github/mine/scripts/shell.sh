@@ -1,0 +1,3 @@
+function edfs {
+  atom $FS
+}
