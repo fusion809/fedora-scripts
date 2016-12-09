@@ -3,19 +3,23 @@ function cdg {
 }
 
 function cdgo {
-	cd $HOME/GitHub/others/$1
+	cd $GHUBO/$1
 }
 
 function cdgm {
-	cd $HOME/GitHub/mine/$1
+	cd $GHUBM/$1
+}
+
+function cdato {
+	cd $ATO
 }
 
 function cdsc {
-	cd $HOME/GitHub/mine/scripts/$1
+	cd $SCR/$1
 }
 
 function cdpk {
-	cd $HOME/GitHub/mine/packaging/$1
+	cd $PKG/$1
 }
 
 function cdaim {
@@ -31,9 +35,9 @@ function cdgam {
 }
 
 function cded {
-	cd $HOME/GitHub/mine/editors/$1
+	cd $EDT/$1
 }
 
 function cdem {
-	cd $HOME/GitHub/mine/editors/emacs/$1
+	cded "emacs/$1"
 }
