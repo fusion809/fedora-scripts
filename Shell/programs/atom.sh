@@ -3,4 +3,6 @@ ATOM_LATEST_VERSION=$(wget -q "https://api.github.com/repos/atom/atom/releases/l
 
 if [[ $ATOM_INSTALLED_VERSION < $ATOM_LATEST_VERSION ]]; then
   sudo dnf install -y https://github.com/atom/atom/releases/download/v${ATOM_LATEST_VERSION}/atom.x86_64.rpm
+elif [[ $ATOM_INSTALLED_VERSION > $ATOM_LATEST_VERSION ]]; then
+  printf "Something is wrong in $HOME/Shell/programs/atom.sh. The version $ATOM_LATEST_VERSION is being calculated to the latest stable Atom release version.\n"
 fi
