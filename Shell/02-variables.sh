@@ -8,3 +8,4 @@ export PKG=$GHUBM/packaging
 export ATO=$GHUBM/atom
 export FS=$SCR/fedora-scripts
 export FGI=$GHUBM/websites/fusion809.github.io
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$GHUBO/dnf-utils/app/usr/lib/python3.5
