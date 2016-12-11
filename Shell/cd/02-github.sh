@@ -38,6 +38,10 @@ function cdgam {
 	cdpk "GVim.AppImage/$1"
 }
 
+function cdpy {
+	cdsc "python-scripts/$1"
+}
+
 function cded {
 	cd $EDT/$1
 }
