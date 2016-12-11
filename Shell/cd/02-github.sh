@@ -42,6 +42,10 @@ function cdpy {
 	cdsc "python-scripts/$1"
 }
 
+function cdjs {
+	cdsc "JScripts/$1"
+}
+
 function cded {
 	cd $EDT/$1
 }
