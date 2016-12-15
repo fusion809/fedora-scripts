@@ -11,8 +11,10 @@ function cdgm {
 }
 
 function cdato {
-	cd $ATO
+	cd $ATO/$1
 }
+
+alias cdga=cdato
 
 function cdsc {
 	cd $SCR/$1
