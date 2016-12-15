@@ -24,6 +24,14 @@ function cdwb {
 	cd $WEB/$1
 }
 
+function cdins {
+	cdgm "installers/$1"
+}
+
+function cdvsi {
+	cdins "vscode-installer/$1"
+}
+
 function cdfgi {
 	cdwb "fusion809.github.io/$1"
 }
