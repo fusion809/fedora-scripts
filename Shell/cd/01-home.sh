@@ -35,8 +35,6 @@ function cdsp {
 	cdrpm "SPECS/$1"
 }
 
-alias cdobs=cdsp
-
 # cd to Shell
 function cdsh {
 	cd $HOME/Shell
@@ -52,4 +50,13 @@ function cdvs {
 
 function cdvi {
 	cd $HOME/"VirtualBox VMs"/ISOs
+}
+
+
+function cdobs {
+	cd $HOME/OBS/$1
+}
+
+function cdobsh {
+	cdobs "home:fusion809/$1"
 }
