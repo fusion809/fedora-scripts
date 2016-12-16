@@ -5,3 +5,7 @@ function ngit {
 function npk {
   nano package.json
 }
+
+function nps {
+  sudo nano /etc/sddm.conf
+}
