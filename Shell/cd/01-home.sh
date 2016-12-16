@@ -49,3 +49,7 @@ function cdv {
 function cdvs {
 	cd $HOME/Videos/SO
 }
+
+function cdvi {
+	cd $HOME/"VirtualBox VMs"/ISOs
+}
