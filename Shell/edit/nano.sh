@@ -2,6 +2,10 @@ function ngit {
   nano .gitignore
 }
 
+function nmf {
+  nano Makefile
+}
+
 function npk {
   nano package.json
 }
