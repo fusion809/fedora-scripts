@@ -1,3 +1,4 @@
+#!/bin/bash
 export SCR="$HOME/GitHub/mine/scripts"
 export FS="$SCR/fedora-scripts"
 export ZSH="$SCR/zsh-theme"
