@@ -1,11 +1,14 @@
-# Create GitHub directory
-if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
-  mkdir -p $HOME/GitHub/mine/scripts
-fi
-
-export FS="$HOME/GitHub/mine/scripts/fedora-scripts"
-export ZSH="$HOME/GitHub/mine/scripts/zsh-theme"
+export SCR="$HOME/GitHub/mine/scripts"
+export FS="$SCR/fedora-scripts"
+export ZSH="$SCR/zsh-theme"
 export OH="$HOME/.oh-my-zsh"
+export PLG="$OH/plugins"
+export TH="$OH/themes"
+
+# Create GitHub directory
+if ! [[ -d $SCR ]]; then
+  mkdir -p $SCR
+fi
 
 # Get openssh, if not pre-installed and Zsh
 sudo dnf install -y git openssh zsh util-linux-user hub
@@ -37,21 +40,21 @@ fi
 if ! [[ -d $ZSH ]]; then
 # Get my self-made zsh-themes
   git clone https://github.com/fusion809/zsh-theme $ZSH
-  cp -a $ZSH/*.zsh-theme $OH/themes/
+  cp -a $ZSH/*.zsh-theme $TH
 else
   cd $ZSH
   git pull origin master
   cd -
-  cp -a $ZSH/*.zsh-theme $OH/themes/
+  cp -a $ZSH/*.zsh-theme $TH
 fi
 
-if ! [[ -d $OH/plugins/zsh-syntax-highlighting ]]; then
+if ! [[ -d $PLG/zsh-syntax-highlighting ]]; then
   # Get zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting $OH/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $PLG/zsh-syntax-highlighting
 fi
 
-if ! [[ -d $OH/plugins/zsh-history-substring-search ]]; then
-  git clone https://github.com/zsh-users/zsh-history-substring-search $OH/plugins/zsh-history-substring-search
+if ! [[ -d $PLG/zsh-history-substring-search ]]; then
+  git clone https://github.com/zsh-users/zsh-history-substring-search $PLG/zsh-history-substring-search
 fi
 
 # Change default login shell to Zsh
