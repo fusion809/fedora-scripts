@@ -13,3 +13,12 @@ if ! `which jekyll > /dev/null 2>&1`; then
     popd
   fi
 fi
+
+cat > /tmp/jekyll <<\EOF
+#!/bin/bash
+pushd /home/fusion809/GitHub/mine/websites/fusion809.github.io
+bundle exec jekyll "$@"
+popd
+EOF
+sudo mv /tmp/jekyll /usr/local/bin/jekyll
+sudo chmod +x /usr/local/bin/jekyll
