@@ -1,9 +1,9 @@
 function sdiy {
-	sudo dnf install -y $@
+	sudo dnf install -y "$@"
 }
 
 function sdry {
-	sudo dnf remove -y $@
+	sudo dnf remove -y "$@"
 }
 
 function update {
@@ -12,4 +12,8 @@ function update {
 
 function sds {
 	sudo dnf search "$@"
+}
+
+function sdbd {
+	sudo dnf builddep -y "$@"
 }
