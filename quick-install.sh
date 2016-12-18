@@ -3,22 +3,26 @@ if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
   mkdir -p $HOME/GitHub/mine/scripts
 fi
 
+export FS="$HOME/GitHub/mine/scripts/fedora-scripts"
+export ZSH="$HOME/GitHub/mine/scripts/zsh-theme"
+export OH="$HOME/.oh-my-zsh"
+
 # Get openssh, if not pre-installed and Zsh
-sudo dnf install -y git openssh zsh util-linux-user
+sudo dnf install -y git openssh zsh util-linux-user hub
 
 # Clone fedora-scripts repo
-if ! [[ -d $HOME/GitHub/mine/scripts/fedora-scripts ]]; then
-  git clone https://github.com/fusion809/fedora-scripts $HOME/GitHub/mine/scripts/fedora-scripts
+if ! [[ -d $FS ]]; then
+  git clone https://github.com/fusion809/fedora-scripts $FS
   # Copy across
-  cp -a $HOME/GitHub/mine/scripts/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/scripts/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/scripts/fedora-scripts ]]; then
-  cd $HOME/GitHub/mine/scripts/fedora-scripts
+  cp -a $FS/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $FS/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $FS ]]; then
+  cd $FS
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/mine/scripts/fedora-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/scripts/fedora-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  cp -a $FS/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $FS/root/{Shell,.bashrc,.zshrc} /root/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -30,24 +34,24 @@ else
   cd -
 fi
 
-if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
+if ! [[ -d $ZSH ]]; then
 # Get my self-made zsh-themes
-  git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/scripts/zsh-theme
-  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  git clone https://github.com/fusion809/zsh-theme $ZSH
+  cp -a $ZSH/*.zsh-theme $OH/themes/
 else
-  cd $HOME/GitHub/mine/scripts/zsh-theme
+  cd $ZSH
   git pull origin master
   cd -
-  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  cp -a $ZSH/*.zsh-theme $OH/themes/
 fi
 
-if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
+if ! [[ -d $OH/plugins/zsh-syntax-highlighting ]]; then
   # Get zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $OH/plugins/zsh-syntax-highlighting
 fi
 
-if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-history-substring-search ]]; then
-  git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
+if ! [[ -d $OH/plugins/zsh-history-substring-search ]]; then
+  git clone https://github.com/zsh-users/zsh-history-substring-search $OH/plugins/zsh-history-substring-search
 fi
 
 # Change default login shell to Zsh
