@@ -8,6 +8,8 @@ function sdry {
 
 function update {
 	sudo dnf update -y
+	flatpak update
+	apmup
 }
 
 function sds {
