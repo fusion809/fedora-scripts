@@ -49,6 +49,12 @@ if ! [[ -d $FS ]]; then
   git clone https://github.com/fusion809/fedora-scripts $FS
 fi
 
+# FS
+export DS=$SCR/debian-scripts
+if ! [[ -d $DS ]]; then
+  git clone https://github.com/fusion809/debian-scripts $DS
+fi
+
 # FGI
 export FGI=$WEB/fusion809.github.io
 if ! [[ -d $FGI ]]; then
