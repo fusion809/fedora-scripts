@@ -13,3 +13,7 @@ function cdjs {
 function cdpy {
 	cdsc "python-scripts/$1"
 }
+
+function cdds {
+	cdsc "debian-scripts/$1"
+}
