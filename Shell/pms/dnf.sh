@@ -6,9 +6,13 @@ function sdry {
 	sudo dnf remove -y "$@"
 }
 
-function update {
+function sduy {
 	sudo dnf update -y
-	flatpak update
+}
+
+function update {
+	sduy
+	flatup
 	apmup
 }
 
