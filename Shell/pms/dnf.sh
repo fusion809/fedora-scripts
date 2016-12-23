@@ -7,7 +7,7 @@ function sdry {
 }
 
 function sduy {
-	sudo dnf update -y
+	sudo dnf update -y --refresh
 }
 
 function update {
