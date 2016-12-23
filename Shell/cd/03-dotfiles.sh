@@ -2,6 +2,10 @@ function cdat {
   cd $HOME/.atom
 }
 
+function cdmen {
+  cd $HOME/.config/menus/$1
+}
+
 function cdi {
   cd $HOME/.icons
 }
