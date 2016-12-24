@@ -9,9 +9,9 @@ sudo dnf install -y $URL/nonfree/fedora/rpmfusion-nonfree-release-${FEDORA_VERSI
 printf '\e[1;31m%-0s\e[m' "Updating all installed packages..."
 printf "\n"
 sudo dnf update -y
-printf '\e[1;31m%-0s\e[m' "Installing broadcom-wl...\n"
+printf '\e[1;31m%-0s\e[m' "Installing broadcom-wl..."
 printf "\n"
 sudo dnf install -y broadcom-wl
-printf '\e[1;31m%-0s\e[m' 'Probing the wl module...\n'
+printf '\e[1;31m%-0s\e[m' 'Probing the wl module...'
 printf "\n"
 sudo modprobe -a wl
