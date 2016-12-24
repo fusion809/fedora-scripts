@@ -7,13 +7,11 @@ function sdry {
 }
 
 function sduy {
-	sudo dnf update -y --refresh
+	sudo dnf update -y
 }
 
-function update {
-	sduy
-	flatup
-	apmup
+function sduyr {
+	sudo dnf update -y --refresh
 }
 
 function sds {

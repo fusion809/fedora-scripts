@@ -1,5 +1,5 @@
 function flatup {
-  flatpak update
+  flatpak update "$@"
 }
 
 function flatin {
