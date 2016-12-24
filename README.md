@@ -15,3 +15,9 @@ or:
 ```bash
 /bin/bash -c "$(curl -sL https://git.io/vrsNO)"
 ```
+
+To quickly install Broadcom wireless run:
+
+```bash
+/bin/bash -c "$(curl -sL https://git.io/vMvoB)"
+```
