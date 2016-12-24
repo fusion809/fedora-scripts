@@ -1,3 +1,7 @@
+if ! [[ -f /usr/bin/nano ]]; then
+  sdiy nano
+fi
+
 function ngit {
   nano .gitignore
 }
