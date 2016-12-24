@@ -33,10 +33,11 @@ printf '\e[1;35m%-0s\e[m' "Updating all installed packages..."
 printf "\n"
 sudo dnf update -y
 # Install broadcom-wl
-printf '\e[1;35m%-0s\e[m' "Installing broadcom-wl..."
+printf '\e[1;35m%-0s\e[m' "Installing broadcom-wl and kernel-devel..."
 printf "\n"
-sdiy broadcom-wl
+sdiy broadcom-wl kernel-devel
 # modprobe broadcom-wl
 printf '\e[1;35m%-0s\e[m' 'Probing the wl module...'
 printf "\n"
+sudo akmods --force --kernel `uname -r` --akmod wl
 sudo modprobe -a wl || printf '\e[1;31m%-0s\e[m' "modprobe failed. Please report this at $BUG_TRACKER." && printf "\n"
