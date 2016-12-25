@@ -9,3 +9,7 @@ function archroot {
 function archup {
   sudo chroot /mnt /usr/bin/update-ubuntu
 }
+
+function ubuntuup {
+  sudo chroot /media/ubuntu /usr/bin/update-fedora
+}
