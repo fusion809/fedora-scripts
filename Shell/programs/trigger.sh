@@ -4,7 +4,7 @@ function trigger {
   bash <(curl -s $BASE_URL/AppImages/master/trigger.sh) "$1"
 }
 
-function vimup {
+function vimaup {
   bash <(curl -s $BASE_URL/GVim.AppImage/master/trigger.sh)
 }
 
