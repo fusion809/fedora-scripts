@@ -3,8 +3,8 @@ if ! [[ -f /usr/bin/osc ]]; then
   sudo dnf install -y osc obs-service-download_files obs-service-format_spec_file obs-service-source_validator
 fi
 
-function vimup {
-  cdobsh vim
+function ovimup {
+  cdobsh $repo
   pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
   baseversion=$(echo $pkgver | sed 's/\.[0-9]*$//g')
   patchversion=$(echo $pkgver | sed "s/$baseversion//g" | sed 's/\.//g')
@@ -20,4 +20,9 @@ function vimup {
   if [[ $baseversion != $vim_baseversion ]] || [[ $patchversion != $vim_patchversion ]]; then
     osc ci -m "Bumping version to $pkgver"
   fi
+}
+
+function vimup {
+  ovimup vim
+  ovimup vim-fedora
 }
