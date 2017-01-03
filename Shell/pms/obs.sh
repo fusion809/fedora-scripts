@@ -24,4 +24,5 @@ function ovimup {
 
 function vimup {
   ovimup vim
+  ovimup vim-redhat
 }
