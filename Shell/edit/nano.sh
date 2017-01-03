@@ -2,6 +2,14 @@ if ! [[ -f /usr/bin/nano ]]; then
   sdiy nano
 fi
 
+function ndc {
+  sudo nano /etc/dnf/dnf.conf
+}
+
+function nps {
+  sudo nano /etc/sddm.conf
+}
+
 function ngit {
   nano .gitignore
 }
@@ -14,18 +22,10 @@ function npk {
   nano package.json
 }
 
-function nps {
-  sudo nano /etc/sddm.conf
-}
-
 function nsp {
   nano *.spec
 }
 
 function nsh {
   nano *.sh
-}
-
-function ndc {
-  sudo nano /etc/dnf/dnf.conf
 }
