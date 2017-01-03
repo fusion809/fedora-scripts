@@ -25,3 +25,7 @@ function nsp {
 function nsh {
   nano *.sh
 }
+
+function ndc {
+  sudo nano /etc/dnf/dnf.conf
+}
