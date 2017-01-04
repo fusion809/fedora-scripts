@@ -11,6 +11,7 @@ function atomup {
 
   if ! `is-at-least $ATOM_LATEST_VERSION ${ATOM_INSTALLED_VERSION:-0}`; then
     if ! [[ -f $HOME/.local/share/atom-${ATOM_LATEST_VERSION} ]]; then
+      # printf "${ATOM_LATEST_VERSION}" >> $HOME/.local/share/atom-${ATOM_LATEST_VERSION} is in case the Atom package is broken like Atom 1.12.8
       sudo dnf install -y https://github.com/atom/atom/releases/download/v${ATOM_LATEST_VERSION}/atom.x86_64.rpm || printf "${ATOM_LATEST_VERSION}" >> $HOME/.local/share/atom-${ATOM_LATEST_VERSION}
     fi
   fi
