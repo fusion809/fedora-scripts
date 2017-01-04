@@ -10,8 +10,10 @@ function atomup {
   autoload is-at-least
 
   if ! `is-at-least $ATOM_LATEST_VERSION ${ATOM_INSTALLED_VERSION:-0}`; then
-    sudo dnf install -y https://github.com/atom/atom/releases/download/v${ATOM_LATEST_VERSION}/atom.x86_64.rpm
+    if ! [[ -f $HOME/.local/share/atom-${ATOM_LATEST_VERSION} ]]; then
+      sudo dnf install -y https://github.com/atom/atom/releases/download/v${ATOM_LATEST_VERSION}/atom.x86_64.rpm || printf "${ATOM_LATEST_VERSION}" >> $HOME/.local/share/atom-${ATOM_LATEST_VERSION}
+    fi
   fi
 }
 
-#atomup
+atomup
