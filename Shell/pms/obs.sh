@@ -27,3 +27,13 @@ function vimup {
   ovimup vim-suse
   ovimup vim-redhat
 }
+
+function obf25 {
+  if [[ -n $1 ]]; then
+    cd $HOME/OBS/home:fusion809/$1
+  fi
+  osc build Fedora_25 --no-verify
+  if [[ -n $1 ]]; then
+    cd -
+  fi
+}
