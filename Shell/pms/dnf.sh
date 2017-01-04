@@ -25,3 +25,7 @@ function sds {
 function sdbd {
 	sudo dnf builddep -y "$@"
 }
+
+function sdbdy {
+	sdbd --refresh "$@"
+}
