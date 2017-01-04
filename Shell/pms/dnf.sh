@@ -2,6 +2,10 @@ function sdiy {
 	sudo dnf install -y "$@"
 }
 
+function sdiyr {
+	sdiy --refresh "$@"
+}
+
 function sdry {
 	sudo dnf remove -y "$@"
 }
