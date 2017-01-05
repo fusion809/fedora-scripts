@@ -12,6 +12,7 @@ else
   printf "/dev/sda2 is mounted on /media/ubuntu\n"
 fi
 
+
 # Mount Arch Linux
 if ! `grep -qs "/mnt" /proc/mounts`; then
   sudo mount /dev/sdb1 /mnt
