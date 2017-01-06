@@ -24,8 +24,8 @@ function ovimup {
 
 function vimup {
   ovimup vim
-  ovimup vim-suse
-  ovimup vim-redhat
+  ovimup "vim-suse"
+  ovimup "vim-redhat"
 }
 
 function obf25 {
