@@ -9,7 +9,11 @@ VSCODE_LATEST_VERSION=$(echo $VSCODE_URL | cut -d '/' -f 4)
 
 autoload is-at-least
 
-if ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION:-0}`; then
+function vscode-install {
   curl -L $VSCODE_URL > /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
   sdiy /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
+}
+
+if ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION:-0}`; then
+  vscode-install
 fi
