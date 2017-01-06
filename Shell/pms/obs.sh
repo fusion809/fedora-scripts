@@ -4,7 +4,7 @@ if ! [[ -f /usr/bin/osc ]]; then
 fi
 
 function ovimup {
-  cdobsh $repo
+  cdobsh $1
   pkgver=$(wget -q https://github.com/vim/vim/releases -O - | grep "tar\.gz" | head -n 1 | cut -d '/' -f 5 | cut -d '"' -f 1 | sed 's/v//g' | sed 's/\.tar\.gz//g')
   baseversion=$(echo $pkgver | sed 's/\.[0-9]*$//g')
   patchversion=$(echo $pkgver | sed "s/$baseversion//g" | sed 's/\.//g')
