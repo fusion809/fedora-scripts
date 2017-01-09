@@ -15,7 +15,7 @@ function sduy {
 }
 
 function sduyr {
-	sudo dnf update -y --refresh
+	sudo dnf update -y --refresh --best --allowerasing
 }
 
 function sds {
