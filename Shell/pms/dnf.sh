@@ -2,6 +2,18 @@ function sdiy {
 	sudo dnf install -y "$@"
 }
 
+function sdgiy {
+	sudo dnf groupinstall -y "$@"
+}
+
+function sdgiyr {
+	sdgiy --refresh "$@"
+}
+
+function sdgl {
+	sudo dnf grouplist
+}
+
 function sdiyr {
 	sdiy --refresh "$@"
 }
