@@ -12,9 +12,15 @@ function ovimup {
   vim_patchversion=$(cat vim.spec | grep "%define patchlevel" | sed 's/%define patchlevel\s*//g' | head -n 1)
   if [[ $baseversion != $vim_baseversion ]]; then
     sed -i -e "s|$vim_baseversion|$baseversion|g" vim.spec
+    if [[ -f PKGBUILD ]]; then
+      sed -i -e "s|$vim_baseversion|$baseversion|g" PKGBUILD
+    fi
   fi
   if [[ $patchversion != $vim_patchversion ]]; then
     sed -i -e "s|$vim_patchversion|$patchversion|g" vim.spec
+    if [[ -f PKGBUILD ]]; then
+      sed -i -e "s|$vim_patchversion|$patchversion|g" PKGBUILD
+    fi
   fi
 
   if [[ $baseversion != $vim_baseversion ]] || [[ $patchversion != $vim_patchversion ]]; then
