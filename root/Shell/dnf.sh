@@ -5,3 +5,7 @@ function diy {
 function update {
 	dnf update -y
 }
+
+function ds {
+	dnf search "$@"
+}
