@@ -9,3 +9,7 @@ function vdc {
 function vsc {
   sudo vim /etc/sddm.conf
 }
+
+function vdk {
+  vim Dockerfile
+}
