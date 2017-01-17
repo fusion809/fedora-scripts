@@ -1,8 +1,7 @@
 #!/bin/bash
-###########################################################################################################################
-# To execute this script run:
+################################################################################################# To execute this script run:
 # /bin/bash -c "$(curl -sL https://git.io/vMvoB)"
-###########################################################################################################################
+################################################################################################
 
 set -u
 
@@ -40,4 +39,4 @@ sdiy broadcom-wl kernel-devel
 printf '\e[1;35m%-0s\e[m' 'Probing the wl module...'
 printf "\n"
 sudo akmods --force --kernel `uname -r` --akmod wl
-sudo modprobe -a wl || printf '\e[1;31m%-0s\e[m' "modprobe failed. Please report this at $BUG_TRACKER." && printf "\n"
+sudo modprobe -a wl || printf '\e[1;31m%-0s\e[m' "modprobe failed. Please report this at :$BUG_TRACKER." && printf "\n"
