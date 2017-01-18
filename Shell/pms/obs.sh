@@ -48,14 +48,14 @@ function obf {
   if [[ -n $1 ]]; then
     cd $HOME/OBS/home:fusion809/$1
   fi
-  osc build Fedora_${FEDORA_VERSION} --no-verify "$@"
+  osc build Fedora_${FEDORA_VERSION} --no-verify "$2"
   if [[ -n $1 ]]; then
     cd -
   fi
 }
 
 function obfns {
-  obf --no-service
+  obf "$1" --no-service
 }
 
 function obco {
