@@ -38,7 +38,7 @@ function obf25 {
   if [[ -n $1 ]]; then
     cd $HOME/OBS/home:fusion809/$1
   fi
-  osc build Fedora_25 --no-verify
+  osc build Fedora_25 --no-verify "$@"
   if [[ -n $1 ]]; then
     cd -
   fi
@@ -48,10 +48,14 @@ function obf {
   if [[ -n $1 ]]; then
     cd $HOME/OBS/home:fusion809/$1
   fi
-  osc build Fedora_${FEDORA_VERSION} --no-verify
+  osc build Fedora_${FEDORA_VERSION} --no-verify "$@"
   if [[ -n $1 ]]; then
     cd -
   fi
+}
+
+function obfns {
+  obf --no-service
 }
 
 function obco {
