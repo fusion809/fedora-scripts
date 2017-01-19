@@ -10,12 +10,20 @@ function vdk {
   vim Dockerfile
 }
 
+function vfgi {
+  vim $FGI
+}
+
 function vrc {
   vim $HOME/.vimrc
 }
 
 function vsc {
   sudo vim /etc/sddm.conf
+}
+
+function vsh {
+  vim $HOME/Shell
 }
 
 function vsp {
