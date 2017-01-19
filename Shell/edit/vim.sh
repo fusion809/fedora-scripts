@@ -14,6 +14,14 @@ function vfgi {
   vim $FGI
 }
 
+function vgd {
+  sudo vim /etc/gdm/custom.conf
+}
+
+function vps {
+  sudo vim /etc/sddm.conf
+}
+
 function vrc {
   vim $HOME/.vimrc
 }
