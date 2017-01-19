@@ -13,3 +13,7 @@ function vsc {
 function vdk {
   vim Dockerfile
 }
+
+function vrc {
+  vim $HOME/.vimrc
+}
