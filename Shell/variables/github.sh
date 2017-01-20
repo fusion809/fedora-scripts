@@ -55,6 +55,18 @@ if ! [[ -d $DS ]]; then
   git clone https://github.com/fusion809/debian-scripts $DS
 fi
 
+# JS
+export JS=$SCR/JScripts
+if ! [[ -d $JS ]]; then
+  git clone https://github.com/fusion809/JScripts $JS
+fi
+
+# PY
+export PY=$SCR/python-scripts
+if ! [[ -d $PY ]]; then
+  git clone https://github.com/fusion809/python-scripts $PY
+fi
+
 # FGI
 export FGI=$WEB/fusion809.github.io
 if ! [[ -d $FGI ]]; then
