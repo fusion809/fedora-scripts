@@ -67,6 +67,9 @@ function pushss {
     cps && cdfs && push "$1" && szsh
   }
 
+  function shvup {
+    cp $HOME/.vimrc $EDT/vim && cdvm && push "$1"
+  }
 #############################################################
 # The following script was taken from
 # http://stackoverflow.com/a/18915067/1876983
