@@ -2,6 +2,10 @@ function vbs {
   vim $HOME/.bashrc
 }
 
+function vcfe {
+  vim $HOME/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum
+}
+
 function vdc {
   sudo vim /etc/dnf/dnf.conf
 }

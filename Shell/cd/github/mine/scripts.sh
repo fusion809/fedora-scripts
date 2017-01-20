@@ -1,5 +1,5 @@
 function cdsc {
-	cd $SCR/$1
+	cd "$SCR/$1"
 }
 
 function cdgn {
