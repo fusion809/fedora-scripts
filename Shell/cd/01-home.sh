@@ -37,7 +37,7 @@ function cdsp {
 
 # cd to Shell
 function cdsh {
-	cd $HOME/Shell
+	cd $HOME/Shell/$1
 }
 
 function cdv {
