@@ -4,10 +4,18 @@ function vfgi {
 
 alias vblog=vfgi
 
-function vpy {
-	vim $PY
+function vgo {
+	vim $SCR/GNU_Octave
 }
 
 function vjs {
 	vim $JS
+}
+
+function vpy {
+        vim $PY
+}
+
+function vzt {
+	vim $SCR/zsh-theme
 }
