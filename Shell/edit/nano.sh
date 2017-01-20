@@ -2,6 +2,10 @@ if ! [[ -f /usr/bin/nano ]]; then
   sdiy nano
 fi
 
+function nbash {
+  nano $HOME/.bashrc
+}
+
 function ndc {
   sudo nano /etc/dnf/dnf.conf
 }
@@ -28,4 +32,12 @@ function nsp {
 
 function nsh {
   nano *.sh
+}
+
+function nvim {
+  nano $HOME/.vimrc
+}
+
+function nzsh {
+  nano $HOME/.zshrc
 }
