@@ -31,5 +31,5 @@ function cdlt {
 }
 
 function cdt {
-  cd $HOME/.themes
+  cd $HOME/.themes/$1
 }
