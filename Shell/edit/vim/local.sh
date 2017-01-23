@@ -2,6 +2,18 @@ function vdk {
 	vim Dockerfile
 }
 
+function vgc {
+	vim gtk.css
+}
+
+function vgt {
+	vim gtkrc
+}
+
+function vix {
+	vim index.theme
+}
+
 function vrm {
 	vim README.md
 }

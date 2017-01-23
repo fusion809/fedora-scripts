@@ -19,7 +19,7 @@ function vrc {
 }
 
 function vsh {
-	vim $HOME/Shell
+	vim $HOME/Shell/$1
 }
 
 function vzs {
