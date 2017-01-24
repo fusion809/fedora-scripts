@@ -1,3 +1,11 @@
+function vc {
+	vim *.c
+}
+
+function vcp {
+	vim *.cpp
+}
+
 function vdk {
 	vim Dockerfile
 }
