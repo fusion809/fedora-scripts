@@ -64,11 +64,11 @@ function pushss {
 
   ## Update sabayon-scripts GitHub repo
   function shup {
-    cps && cdfs && push "$1" && szsh
+    cps && cdfs && push "$1" && szsh && cd -
   }
 
   function shvup {
-    cp $HOME/.vimrc $EDT/vim && cdvm && push "$1"
+    cp $HOME/.vimrc $EDT/vim && cdvm && push "$1" && cd -
   }
 #############################################################
 # The following script was taken from
