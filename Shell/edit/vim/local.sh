@@ -22,6 +22,10 @@ function vix {
 	vim index.theme
 }
 
+function vmk {
+	vim Makefile
+}
+
 function vrm {
 	vim README.md
 }
