@@ -15,12 +15,14 @@ function ovimup {
     if [[ -f PKGBUILD ]]; then
       sed -i -e "s|$vim_baseversion|$baseversion|g" PKGBUILD
     fi
+    sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
   fi
   if [[ $patchversion != $vim_patchversion ]]; then
     sed -i -e "s|patchlevel $vim_patchversion|patchlevel $patchversion|g" vim.spec
     if [[ -f PKGBUILD ]]; then
       sed -i -e "s|$vim_patchversion|$patchversion|g" PKGBUILD
     fi
+    sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
   fi
 
   if [[ $baseversion != $vim_baseversion ]] || [[ $patchversion != $vim_patchversion ]]; then
