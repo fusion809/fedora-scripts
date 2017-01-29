@@ -35,7 +35,6 @@ function vimup {
   ovimup "vim-suse"
   ovimup "vim-redhat"
   vimaup
-  sudo chroot /mnt /usr/local/bin/su-vimup
 }
 
 function obf25 {
