@@ -76,3 +76,8 @@ function obc {
   popd
   cdobsh "$1"
 }
+
+function mobc {
+  osc mkpac home:fusion809 "$1"
+  obc
+}
