@@ -1,6 +1,10 @@
+function git-branch {
+	git rev-parse --abbrev-ref HEAD
+}
+
 # Push changes
 function push {
-	git add --all && git commit -m "$1" && git push origin $(git rev-parse --abbrev-ref HEAD)
+	git add --all && git commit -m "$1" && git push origin $(git-branch)
 }
 
 # Estimate the size of the current repo
