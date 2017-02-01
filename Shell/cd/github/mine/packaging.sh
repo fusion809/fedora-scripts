@@ -13,3 +13,7 @@ function cdeam {
 function cdgam {
 	cdpk "GVim.AppImage/$1"
 }
+
+function cdfr {
+	cdpk "fedora-rpmbuild/$1"
+}
