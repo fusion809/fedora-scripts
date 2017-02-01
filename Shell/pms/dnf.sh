@@ -1,5 +1,5 @@
 function sdiy {
-	sudo dnf install -y "$@"
+	sudo dnf install -y "$@" --best --allowerasing
 }
 
 function sdgiy {
@@ -23,7 +23,7 @@ function sdry {
 }
 
 function sduy {
-	sudo dnf update -y
+	sudo dnf update -y --best --allowerasing
 }
 
 function sduyr {

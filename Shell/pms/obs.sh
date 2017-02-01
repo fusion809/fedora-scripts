@@ -78,6 +78,6 @@ function obc {
 }
 
 function mobc {
-  osc mkpac home:fusion809 "$1"
-  obc
+  osc mkpac "$1"
+  obc "$1"
 }
