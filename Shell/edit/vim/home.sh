@@ -3,15 +3,21 @@ function vbs {
 }
 
 function vcfe {
-	vim $HOME/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum
+	pushd $HOME/Documents/CodeLite/CPP-Math-Projects/Simple-Pendulum
+	vim
+	popd
 }
 
 function vobs {
-	vim "$HOME/OBS/$1"
+	pushd "$HOME/OBS/$1"
+	vim
+	popd
 }
 
 function vobsh {
-	vobs "home:fusion809/$1"
+	pushd "home:fusion809/$1"
+	vim
+	popd
 }
 
 function vrc {
@@ -19,7 +25,9 @@ function vrc {
 }
 
 function vsh {
-	vim $HOME/Shell/$1
+	pushd $HOME/Shell/$1
+	vim
+	popd
 }
 
 function vzs {

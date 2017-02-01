@@ -1,43 +1,43 @@
-function vfgi {
+function gvfgi {
 	pushd $FGI
-	vim
+	gvim
 	popd
 }
 
-alias vblog=vfgi
+alias gvblog=gvfgi
 
-function vgm {
+function gvgm {
 	pushd $GHUBM/$1
-	vim
+	gvim
 	popd
 }
 
-function vgo {
+function gvgo {
 	pushd $GHUBO/$1
-	vim
+	gvim
 	popd
 }
 
-function voct {
+function gvoct {
 	pushd $SCR/GNU_Octave
-	vim
+	gvim
 	popd
 }
 
-function vjs {
+function gvjs {
 	pushd $JS
-	vim
+	gvim
 	popd
 }
 
-function vpy {
+function gvpy {
         pushd $PY
-	vim
+	gvim
 	popd
 }
 
-function vzt {
+function gvzt {
 	pushd $SCR/zsh-theme
-	vim
+	gvim
 	popd
 }
