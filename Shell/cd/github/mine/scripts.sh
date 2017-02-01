@@ -17,3 +17,8 @@ function cdpy {
 function cdds {
 	cdsc "debian-scripts/$1"
 }
+
+function cdfs {
+	cdsc "fedora-scripts/$1"
+}
+
