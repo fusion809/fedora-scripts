@@ -10,5 +10,5 @@ function update {
 	apmup
 	printf '\e[1;34m%-0s\e[m' "Updating openSUSE Tumbleweed packages..."
 	printf "\n"
-        tumbup
+        zpup
 }
