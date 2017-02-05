@@ -1,15 +1,11 @@
-function pacaup {
-  sudo chroot /mnt /usr/bin/pacaur-ubuntu
+function zpup {
+  sudo chroot /mnt /usr/bin/zypper-fedora
 }
 
-function archroot {
+function tumbroot {
   sudo arch-chroot /mnt /usr/bin/su-fusion809
 }
 
-function archup {
-  sudo chroot /mnt /usr/bin/update-ubuntu
-}
-
-function ubuntuup {
-  sudo chroot /media/ubuntu /usr/bin/update-fedora
+function tumbup {
+  sudo chroot /mnt /usr/bin/tumbup
 }
