@@ -55,6 +55,9 @@ plugins=(git github zsh-syntax-highlighting safe-paste zsh-completions github)
 
 autoload -U compinit && compinit
 source $ZSH/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Source this before setting substring keybindings per zsh-users/zsh-history-substring-search#77
+source $ZSH/oh-my-zsh.sh
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -75,8 +78,6 @@ bindkey '^[[B' history-substring-search-down
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
