@@ -54,3 +54,9 @@ function vzt {
 	vim
 	popd
 }
+
+function vlu {
+    pushd $SCR/lua-scripts
+    vim
+    popd
+}
