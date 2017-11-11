@@ -61,4 +61,12 @@ fi
 # Change default login shell to Zsh
 chsh -s /bin/zsh
 sudo chsh -s /bin/zsh
+
+# ssh-setup
+if ! [[ -f $HOME/.ssh/id_rsa.pub ]]; then
+    ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
+fi
+
+# Change shell
 /bin/zsh
+
