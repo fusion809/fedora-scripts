@@ -60,3 +60,7 @@ function cdobs {
 function cdobsh {
 	cdobs "home:fusion809/$1"
 }
+
+function cddo {
+    vim $HOME/Downloads/$1
+}
