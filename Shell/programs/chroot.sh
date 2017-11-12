@@ -13,3 +13,17 @@ function groot {
     sudo chroot /gentoo /usr/local/bin/su-fusion809
 }
 
+function aroot {
+    if ! [[ -f /arch/proc/config.gz ]]; then
+        sudo mount -t proc /proc /arch/proc
+        sudo mount --rbind /dev /arch/dev
+        sudo mount --make-rslave /arch/dev
+        sudo mount --rbind /sys /arch/sys
+        sudo mount --make-rslave /arch/sys
+        sudo rm /arch/etc/resolv.conf
+        sudo cp /etc/resolv.conf /arch/etc
+    fi
+
+    sudo chroot /arch /usr/local/bin/su-fusion809
+}
+
