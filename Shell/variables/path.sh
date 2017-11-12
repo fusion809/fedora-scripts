@@ -1,2 +1,3 @@
 export PATH=/bin:/sbin:/usr/bin:/usr/lib64/ccache:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/games:$HOME/.nix-profile/bin
+export XDG_SHARE_DIRS=$XDG_SHARE_DIRS:$GHUBO/nixpkgs/result/share
 
