@@ -62,5 +62,5 @@ function cdobsh {
 }
 
 function cddo {
-    vim $HOME/Downloads/$1
+    cd $HOME/Downloads/$1
 }
