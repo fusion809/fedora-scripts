@@ -22,3 +22,6 @@ function cdfs {
 	cdsc "fedora-scripts/$1"
 }
 
+function cdas {
+    cdsc "arch-scripts/$1"
+}
