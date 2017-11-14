@@ -13,6 +13,7 @@ function update {
     nixup
 
     printf '\e[1;34m%-0s\e[m' "Updating GitHub repositories..."    
+    printf "\n"
     for i in $GHUBO/* 
     do 
          cd $i 
