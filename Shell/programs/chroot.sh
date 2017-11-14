@@ -1,5 +1,5 @@
 function groot {
-    if ! [[ -f /gentoo/proc/config.gz ]]; then
+    if ! [[ -f /gentoo/proc/cpuinfo ]]; then
         sudo mount -t proc /proc /gentoo/proc
         sudo mount --rbind /dev /gentoo/dev
         sudo mount --make-rslave /gentoo/dev
@@ -14,7 +14,7 @@ function groot {
 }
 
 function aroot {
-    if ! [[ -f /arch/proc/config.gz ]]; then
+    if ! [[ -f /arch/proc/cpuinfo ]]; then
         sudo mount -t proc /proc /arch/proc
         sudo mount --rbind /dev /arch/dev
         sudo mount --make-rslave /arch/dev
