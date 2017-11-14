@@ -1,12 +1,8 @@
 ## Update local fedora-scripts repo
 
 function cps {
-	sudo rm -rf $FS/Shell $FS/root/Shell
-	mkdir -p $FS/Shell
+        # Everything should be up as symlinks now.
 	chmod +x $HOME/Shell/{*,*/*,*/*/*/*,*/*/*/*/*,*/*/*/*/*/*}.sh
-	cp -a $HOME/Shell/* $FS/Shell
-	cp -a $HOME/.{bash,zsh}rc $FS/
-	sudo cp -a /root/{Shell,.{bash,zsh}rc} $FS/root/
 	sudo chmod +x $FS/root/Shell/*.sh
 }
 
