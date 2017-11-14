@@ -24,7 +24,10 @@ function aroot {
         sudo cp /etc/resolv.conf /arch/etc
     fi
 
-    sudo mount /dev/sdb1 /arch/data
+    if ! [[ -d /arch/data/Documents ]]; then
+         sudo mount /dev/sdb1 /arch/data
+    fi
+
     sudo chroot /arch /usr/local/bin/su-fusion809
 }
 
