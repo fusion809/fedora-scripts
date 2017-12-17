@@ -1,9 +1,13 @@
+function vfs {
+    vim /etc/fstab
+}
+
 function vps {
-	vim /etc/sddm.conf
+    vim /etc/sddm.conf
 }
 
 function vsh {
-	cdsh
-	vim
-	cd -
+    pushd $HOME/Shell
+    vim
+    popd
 }
