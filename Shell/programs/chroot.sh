@@ -62,3 +62,22 @@ function genroot {
          sudo touch "$root/.autorelabel"
     fi
 }
+
+function froot {
+    if ! [[ -d /fedora-rawhide/boot ]]; then
+         sudo mount /dev/sda12 /fedora-rawhide
+         sudo mount /dev/sda11 /fedora-rawhide/root00/boot
+         sudo mount /dev/sda1 /fedora-rawhide/root00/boot/efi
+    fi
+
+    genroot /fedora-rawhide
+}
+
+function otroot {
+    if ! [[ -d /opensuse/boot ]]; then
+         sudo mount /dev/sda13 /opensuse
+         sudo mount /dev/sda1 /opensuse/boot/efi
+    fi
+
+    genroot /opensuse
+}
