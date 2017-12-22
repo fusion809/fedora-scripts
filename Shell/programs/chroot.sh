@@ -40,7 +40,7 @@ function genroot {
          root="$1"
     fi
 
-    if ! [[ -f "$root/proc/config.gz" ]]; then
+    if ! [[ -f "$root/proc/meminfo" ]]; then
          sudo mount -t proc /proc "$root/proc"
          sudo mount --rbind /dev "$root/dev"
          sudo mount --make-rslave "$root/dev"
