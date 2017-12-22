@@ -64,7 +64,7 @@ function genroot {
 }
 
 function froot {
-    if ! [[ -d /fedora-rawhide/boot ]]; then
+    if ! [[ -d /fedora-rawhide/root00/boot ]]; then
          sudo mount /dev/sda12 /fedora-rawhide
          sudo mount /dev/sda11 /fedora-rawhide/root00/boot
          sudo mount /dev/sda1 /fedora-rawhide/root00/boot/efi
