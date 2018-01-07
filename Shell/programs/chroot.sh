@@ -1,46 +1,13 @@
-function groot {
-    if ! [[ -f /gentoo/proc/cpuinfo ]]; then
-        sudo mount -t proc /proc /gentoo/proc
-        sudo mount --rbind /dev /gentoo/dev
-        sudo mount --make-rslave /gentoo/dev
-        sudo mount --rbind /sys /gentoo/sys
-        sudo mount --make-rslave /gentoo/sys
-        sudo rm /gentoo/etc/resolv.conf
-        sudo cp /etc/resolv.conf /gentoo/etc
-        sudo chroot /gentoo /usr/local/bin/md
-    fi
-
-    sudo chroot /gentoo /usr/local/bin/su-fusion809
-}
-
-function aroot {
-    if ! [[ -f /arch/proc/cpuinfo ]]; then
-        sudo mount -t proc /proc /arch/proc
-        sudo mount --rbind /dev /arch/dev
-        sudo mount --make-rslave /arch/dev
-        sudo mount --rbind /sys /arch/sys
-        sudo mount --make-rslave /arch/sys
-        sudo rm /arch/etc/resolv.conf
-        sudo cp /etc/resolv.conf /arch/etc
-    fi
-
-    if ! [[ -d /arch/data/Documents ]]; then
-         sudo mount /dev/sdb1 /arch/data
-    fi
-
-    sudo chroot /arch /usr/local/bin/su-fusion809
-}
-
 function genroot {
     if [[ -d $1/root/dev ]]; then
          root="$1/root"
-    elif [[ -d $1/root00/dev ]]; then
-         root="$1/root00"
+    elif [[ -d $1/@/dev ]]; then
+         root="$1/@"
     else
          root="$1"
     fi
 
-    if ! [[ -f "$root/proc/meminfo" ]]; then
+    if ! [[ -f "$root/proc/config.gz" ]]; then
          sudo mount -t proc /proc "$root/proc"
          sudo mount --rbind /dev "$root/dev"
          sudo mount --make-rslave "$root/dev"
@@ -53,9 +20,29 @@ function genroot {
     if [[ -f $root/usr/local/bin/su-fusion809 ]]; then
          sudo chroot "$root" /usr/local/bin/su-fusion809
     elif [[ -f $root/bin/zsh ]]; then
-         sudo chroot "$root" /bin/zsh
-    else  
-         sudo chroot "$root" /bin/bash
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/zsh --login +h
+    elif [[ -f $root/bin/bash ]]; then
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/bash --login +h
+    elif [[ -f $root/bin/sh ]] && [[ -f $root/bin/env ]]; then
+         sudo chroot "$root" /bin/env -i \
+               HOME="/root"              \
+               TERM="$TERM"              \
+               PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;31m\]\$\[\e[m\] \['            \
+               PATH=/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin \
+               /bin/sh --login +h
+    elif [[ -f $root/bin/sh ]] || [[ -L $root/bin/sh ]]; then
+         sudo chroot "$root" /bin/sh
+    else
+         printf "I'm missing a shell, mate!"
     fi
 
     if [[ -f $root/usr/bin/dnf ]]; then
@@ -63,21 +50,10 @@ function genroot {
     fi
 }
 
-function froot {
-    if ! [[ -d /fedora-rawhide/root00/boot ]]; then
-         sudo mount /dev/sda12 /fedora-rawhide
-         sudo mount /dev/sda11 /fedora-rawhide/root00/boot
-         sudo mount /dev/sda1 /fedora-rawhide/root00/boot/efi
-    fi
-
-    genroot /fedora-rawhide
+function groot {
+    genroot /gentoo
 }
 
-function otroot {
-    if ! [[ -d /opensuse/boot ]]; then
-         sudo mount /dev/sda13 /opensuse
-         sudo mount /dev/sda1 /opensuse/boot/efi
-    fi
-
-    genroot /opensuse
+function aroot {
+    genroot /arch
 }
