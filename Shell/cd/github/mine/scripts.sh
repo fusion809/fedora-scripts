@@ -25,3 +25,7 @@ function cdfs {
 function cdas {
     cdsc "arch-scripts/$1"
 }
+
+function cdos {
+    cdsc "opensuse-scripts/$1"
+}
