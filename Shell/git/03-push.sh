@@ -4,7 +4,12 @@ function git-branch {
 
 # Push changes
 function push {
-	git add --all && git commit -m "$1" && git push origin $(git-branch)
+    git add --all && git commit -m "$1" && git push origin $(git-branch)
+    if `echo $PWD | grep "$HOME/Shell" > /dev/null 2>&1`; then
+         szsh
+    elif `echo $PWD | grep "$FS" > /dev/null 2>&1`; then
+         szsh
+    fi
 }
 
 # Estimate the size of the current repo
