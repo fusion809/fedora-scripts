@@ -11,5 +11,7 @@ function apms {
 }
 
 function apmup {
-  apm update --no-confirm
+  if `which apm > /dev/null 2>&1`; then
+      apm update --no-confirm
+  fi
 }
