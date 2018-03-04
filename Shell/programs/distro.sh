@@ -27,35 +27,38 @@ function distro-partition {
               # Debian 9
               printf "                "
          elif [[ $i == "3" ]]; then
+              # Debian sid
+              printf "              "
+         elif [[ $i == "4" ]]; then
               # deepin
               printf "                  "
-         elif [[ $i == "4" ]]; then
+         elif [[ $i == "5" ]]; then
               # Fedora 27
               printf "               "
-         elif [[ $i == "5" ]]; then
+         elif [[ $i == "6" ]]; then
               # Gentoo Linux
               printf "            "
-         elif [[ $i == "6" ]]; then
+         elif [[ $i == "7" ]]; then
               # KDE neon git unstable
               printf "   "
-         elif [[ $i == "7" ]]; then
+         elif [[ $i == "8" ]]; then
               # Linux Mint 18.3 Cinnamon
               # No printf needed
-         elif [[ $i == "8" ]]; then
+         elif [[ $i == "9" ]]; then
               # Mageia 6
               printf "                "
-         elif [[ $i == "9" ]]; then
+         elif [[ $i == "10" ]]; then
               # NixOS 17.09
               printf "             "
-         elif [[ $i == "10" ]]; then
+         elif [[ $i == "11" ]]; then
               # openSUSE Tumbleweed
               printf "     "
-         elif [[ $i == "11" ]]; then
+         elif [[ $i == "12" ]]; then
               # PCLinuxOS
               printf "               "
-         elif [[ $i == "12" ]]; then
-              printf "          "
          elif [[ $i == "13" ]]; then
+              printf "          "
+         elif [[ $i == "14" ]]; then
               printf "              "
          fi
          printf " -> "

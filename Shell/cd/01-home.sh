@@ -34,6 +34,14 @@ function cdpa {
     cdp "AppImages/$1"
 }
 
+function cdpi {
+    cd "$HOME/Pictures/$1"
+}
+
+function cdps {
+    cdpi "Screenshots/$1"
+}
+
 function cdrpm {
     cd $HOME/rpmbuild/$1
 }
