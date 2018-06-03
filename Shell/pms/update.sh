@@ -14,10 +14,5 @@ function update {
 
     printf '\e[1;34m%-0s\e[m' "Updating GitHub repositories..."    
     printf "\n"
-    for i in $GHUBO/* 
-    do 
-         cd $i 
-         git pull --all -q 
-         cd - 
-    done 
+    gitup
 }
