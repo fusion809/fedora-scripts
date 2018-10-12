@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/root/.gem/ruby/2.2.0/bin:/home/fusion809/.gem/ruby/2.2.0/bin:/usr/lib/jvm/java-8-openjdk/bin/:/bin:/usr/bin:/sbin:/usr/sbin"
 export ZSH=/home/fusion809/.oh-my-zsh
-
+export ZSH_DISABLE_COMPFIX="true"
 # Set name of the theme to load.
 # Look in $HOME/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
