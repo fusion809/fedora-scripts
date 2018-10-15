@@ -51,7 +51,7 @@ ZSH_THEME="hfulldate"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git zsh-syntax-highlighting safe-paste zsh-completions)
+plugins=(vi-mode git github zsh-syntax-highlighting safe-paste zsh-completions)
 
 autoload -U compinit && compinit
 source $ZSH/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
