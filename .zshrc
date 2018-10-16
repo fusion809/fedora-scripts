@@ -51,13 +51,12 @@ ZSH_THEME="hfulldate"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git github zsh-syntax-highlighting safe-paste zsh-completions)
-
+plugins=(git github zsh-syntax-highlighting vi-mode
+#safe-paste zsh-completions
+)
 autoload -U compinit && compinit
-source $ZSH/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# Source this before setting substring keybindings per zsh-users/zsh-history-substring-search#77
 source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -77,7 +76,9 @@ bindkey '^[[B' history-substring-search-down
 # bindkey -M vicmd 'j' history-substring-search-down
 # User configuration
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
