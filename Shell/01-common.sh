@@ -1,4 +1,6 @@
-for i in $HOME/Shell/common-scripts/*.sh
+PRESENT_DIRECTORY="`dirname \"$0\"`"
+for i in ${PRESENT_DIRECTORY}/common-scripts/*.sh
 do
-    . "$i"
+     . "$i"
 done
+
